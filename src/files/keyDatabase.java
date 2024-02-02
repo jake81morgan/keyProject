@@ -15,7 +15,6 @@ public class keyDatabase {
 	
 	public void loadData(String fileName) {
 		
-		
 		try {
 			File file = new File(fileName);
 			Scanner scan = new Scanner(file);
@@ -28,13 +27,13 @@ public class keyDatabase {
 				if(info.length > 1) {
 					id.setStock_number(info[0]);
 					id.setYear(info[1]);;
-					id.setMake(info[2]);
+					id.setMake(info[2].toUpperCase());
 					id.setModel(info[3]);
 					id.setDate(info[4]);
 					if(info.length > 5) {
 						id.setPerson(info[5]);
 					}
-					System.out.println(id);
+					keys.add(id);
 				}
 			}
 			scan.close();
