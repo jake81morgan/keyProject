@@ -2,9 +2,12 @@ package files;
 
 
 import javax.swing.*;
+import javax.swing.table.TableModel;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class keyGUI {
 	
@@ -18,16 +21,24 @@ public class keyGUI {
 	}
 	
 	public void configGUI() {
+		
+		JPanel panel = new JPanel(new GridLayout(3,5,5,5));
+		JTextArea textArea = new JTextArea(10, 20);
+		JScrollPane scrollPane = new JScrollPane(textArea);
+		textArea.setEditable(false);
+		scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+		
 	
-		JPanel panel = new JPanel();
 		
 		screen.setTitle("GUI");
 		screen.setSize(1000, 500);
 		
+		TestTableSortFilter table = new TestTableSortFilter();
+		
 		panel.setBorder(BorderFactory.createEmptyBorder(0,0,0,0));
-		this.buttonGUI();
 		JButton button = new JButton("Button");
-		panel.add(button);
+		JButton button2 = new JButton("Hello");
+		panel.add(table);
 		screen.add(panel, BorderLayout.WEST);
 		
 		
@@ -36,9 +47,5 @@ public class keyGUI {
 		
 	}
 	
-	public void buttonGUI() {
-		
-		
-	}
 	
 }
