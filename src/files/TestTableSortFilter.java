@@ -24,13 +24,6 @@ public class TestTableSortFilter extends JPanel {
     private Object[] num = {"USA", "Washington DC", 280, true};
 
     private Object[][] data = {
-        {num[0], num[1], num[2]},
-        {"Canada", "Ottawa", 32, true},
-        {"United Kingdom", "London", 60, true},
-        {"Germany", "Berlin", 83, true},
-        {"France", "Paris", 60, true},
-        {"Norway", "Oslo", 4.5, true},
-        {"India", "New Delhi", 1046, true}
     };
 
     private DefaultTableModel model = new DefaultTableModel(data, columnNames);
